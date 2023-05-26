@@ -1,0 +1,11 @@
+--Creación de la Base de Datos
+postgres=# CREATE DATABASE rebound_db;
+
+--Creación de un Usuario
+postgres=# CREATE USER alexis;
+
+--Listar una Base de Datos especifica
+postgres=# \l rebound_db;
+
+--Ingresar a la Base de Datos
+postgres=# \c rebound_db;

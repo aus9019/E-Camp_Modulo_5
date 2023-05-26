@@ -1,0 +1,13 @@
+--Creación de la Base de Datos
+postgres=# CREATE DATABASE nuevo_curso;
+
+--Creación de los tres usuarios
+postgres=# CREATE USER usuario_1;
+postgres=# CREATE USER usuario_2;
+postgres=# CREATE USER usuario_3;
+
+--Listar una Base de Datos especifica
+postgres=# \l nuevo_curso;
+
+--Ingresar a la Base de Datos
+postgres=# \c nuevo_curso;
