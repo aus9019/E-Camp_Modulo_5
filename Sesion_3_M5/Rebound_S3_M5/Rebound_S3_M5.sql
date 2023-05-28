@@ -21,14 +21,9 @@ CREATE TABLE TipoVehiculo (
 	Nombre VARCHAR(120)
 );
 
-CREATE TABLE Venta (
-	Folio INT PRIMARY KEY,
-	Fecha DATE,
-	Monto INT,
-	Vehiculo_IDVehiculo INT UNIQUE,
-	Cliente_RUT VARCHAR (10),
-	FOREIGN KEY (Vehiculo_IDVehiculo) REFERENCES Vehiculo (IDVehiculo),
-    FOREIGN KEY (Cliente_RUT) REFERENCES Cliente (RUT)
+CREATE TABLE Marca (
+	IDMarca INT PRIMARY KEY,
+	Nombre VARCHAR(120)
 );
 
 CREATE TABLE Vehiculo (
@@ -45,15 +40,20 @@ CREATE TABLE Vehiculo (
     FOREIGN KEY (Marca_IDMarca) REFERENCES Marca (IDMarca)
 );
 
+CREATE TABLE Venta (
+	Folio INT PRIMARY KEY,
+	Fecha DATE,
+	Monto INT,
+	Vehiculo_IDVehiculo INT UNIQUE,
+	Cliente_RUT VARCHAR (10),
+	FOREIGN KEY (Vehiculo_IDVehiculo) REFERENCES Vehiculo (IDVehiculo),
+    FOREIGN KEY (Cliente_RUT) REFERENCES Cliente (RUT)
+);
+
 CREATE TABLE Mantencion (
 	IDMantencion INT PRIMARY KEY,
 	Fecha DATE,
 	TrabajosRealizados VARCHAR(1000),
 	Venta_Folio INT,
 	FOREIGN KEY (Venta_Folio) REFERENCES Venta (Folio)
-);
-
-CREATE TABLE Marca (
-	IDMarca INT PRIMARY KEY,
-	Nombre VARCHAR(120)
 );
