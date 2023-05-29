@@ -28,13 +28,13 @@ WHERE RUT = '11775824-3';
 DELETE FROM Herramienta
 WHERE IDHerramienta = 010;
 
-
 -- Inserte 2 arriendos para cada cliente.
 INSERT INTO Arriendo (Folio, Fecha, Dias, ValorDia, Garantia, Herramienta_IDHerramienta, Cliente_RUT)
-VALUES (1001, '2023-04-28', 4, 9990, 15000, 013, '12512724-5'),
-	   (1004, '2023-05-12', 6, 4990, 12000, 011, '13623712-7');
-
-
+VALUES (1001, '2020-01-20', 4, 9990, 15000, 013, '12512724-5'),
+       (1002, '2020-01-28', 2, 9990, 15000, 011, '12512724-5'),
+       (1003, '2022-05-12', 5, 4990, 12000, 014, '13623712-7'),
+	   (1004, '2022-05-12', 6, 4990, 12000, 014, '13623712-7');
+	   
 -- Modifique el correo electrónico del primer cliente.
 UPDATE Cliente
 SET Correo = 'matador@correo.com'
